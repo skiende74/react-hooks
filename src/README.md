@@ -9,7 +9,8 @@ React Hooks
 - [x] useConfirm (X) -> createConfirmHandler
 - [x] usePreventLeave (X) -> createPreventHandler
 - [x] useBeforeLeave
-- [ ] useFadeIn & useNetwork
+- [x] useFadeIn
+- [ ] useNetwork
 - [ ] useScroll & useFullscreen
 - [ ] useNotification
 - [ ] useAxios

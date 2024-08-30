@@ -1,9 +1,9 @@
-import BeforeLeavePage from "./usecase/BeforeLeavePage";
+import FadeInPage from "./usecase/FadeInPage";
 
 function App() {
   return (
     <div className="app">
-      <BeforeLeavePage />
+      <FadeInPage />
     </div>
   );
 }
