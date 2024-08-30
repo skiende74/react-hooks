@@ -1,9 +1,9 @@
-import ScrollPage from "./usecase/ScrollPage";
+import FullScreenPage from "./usecase/FullScreenPage";
 
 function App() {
   return (
     <div className="app">
-      <ScrollPage />
+      <FullScreenPage />
     </div>
   );
 }
