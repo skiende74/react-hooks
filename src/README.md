@@ -10,7 +10,7 @@ React Hooks
 - [x] usePreventLeave (X) -> createPreventHandler
 - [x] useBeforeLeave
 - [x] useFadeIn
-- [ ] useNetwork
+- [x] useNetwork
 - [ ] useScroll & useFullscreen
 - [ ] useNotification
 - [ ] useAxios

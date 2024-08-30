@@ -1,9 +1,9 @@
-import FadeInPage from "./usecase/FadeInPage";
+import NetworkPage from "./usecase/NetworkPage";
 
 function App() {
   return (
     <div className="app">
-      <FadeInPage />
+      <NetworkPage />
     </div>
   );
 }
