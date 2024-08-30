@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import ClickPage from "./usecase/ClickPage";
+import PreventLeavePage from "./usecase/PreventLeavePage";
 
 function App() {
   return (
     <div className="app">
-      <ClickPage />
+      <PreventLeavePage />
     </div>
   );
 }
