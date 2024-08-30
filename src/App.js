@@ -1,9 +1,9 @@
-import PreventLeavePage from "./usecase/PreventLeavePage";
+import BeforeLeavePage from "./usecase/BeforeLeavePage";
 
 function App() {
   return (
     <div className="app">
-      <PreventLeavePage />
+      <BeforeLeavePage />
     </div>
   );
 }
