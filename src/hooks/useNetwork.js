@@ -1,24 +1,19 @@
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
-const useNetwork = (onChange) => {
-  const [status, setStatus] = useState(navigator.onLine);
-
-  const handleChange = () => {
-    setStatus(navigator.onLine);
-    if (typeof onChange !== "function") return;
-    onChange(navigator.onLine);
+const subscribe = (callback) => {
+  window.addEventListener("online", callback);
+  window.addEventListener("offline", callback);
+  return () => {
+    window.removeEventListener("online", callback);
+    window.removeEventListener("offline", callback);
   };
-
-  useEffect(() => {
-    window.addEventListener("online", handleChange);
-    window.addEventListener("offline", handleChange);
-    return () => {
-      window.removeEventListener("online", handleChange);
-      window.removeEventListener("offline", handleChange);
-    };
-  });
-
-  return status;
 };
+
+const useNetwork = () =>
+  useSyncExternalStore(
+    subscribe,
+    () => navigator.onLine,
+    () => true
+  );
 
 export default useNetwork;
