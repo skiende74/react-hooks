@@ -20,7 +20,7 @@ const useFullscreen = (callback) => {
       element.current.msRequestFullScreen();
     }
 
-    runCallback(false);
+    runCallback(true);
   };
 
   const exitFull = () => {
