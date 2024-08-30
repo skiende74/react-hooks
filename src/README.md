@@ -12,6 +12,6 @@ React Hooks
 - [x] useFadeIn
 - [x] useNetwork
 - [x] useScroll
-- [ ] useFullscreen
-- [ ] useNotification
-- [ ] useAxios
+- [x] useFullscreen
+- [x] useNotification
+- [x] useAxios

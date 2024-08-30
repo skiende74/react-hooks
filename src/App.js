@@ -1,9 +1,10 @@
+import AxiosPage from "./usecase/AxiosPage";
 import NotificationPage from "./usecase/NotificationPage";
 
 function App() {
   return (
     <div className="app">
-      <NotificationPage />
+      <AxiosPage />
     </div>
   );
 }
