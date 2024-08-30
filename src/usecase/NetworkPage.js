@@ -1,24 +1,6 @@
-import React, { useEffect, useState } from "react";
-const useNetwork = (onChange) => {
-  const [status, setStatus] = useState(navigator.onLine);
+import React from "react";
+import useNetwork from "../hooks/useNetwork";
 
-  const handleChange = () => {
-    setStatus(navigator.onLine);
-    if (typeof onChange !== "function") return;
-    onChange(navigator.onLine);
-  };
-
-  useEffect(() => {
-    window.addEventListener("online", handleChange);
-    window.addEventListener("offline", handleChange);
-    return () => {
-      window.removeEventListener("online", handleChange);
-      window.removeEventListener("offline", handleChange);
-    };
-  });
-
-  return status;
-};
 const NetworkPage = () => {
   const handleNetworkChange = (online) => {
     console.log(online ? "we are online" : "we are offline");
