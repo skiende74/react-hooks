@@ -1,9 +1,9 @@
-import NetworkPage from "./usecase/NetworkPage";
+import ScrollPage from "./usecase/ScrollPage";
 
 function App() {
   return (
     <div className="app">
-      <NetworkPage />
+      <ScrollPage />
     </div>
   );
 }

@@ -11,6 +11,7 @@ React Hooks
 - [x] useBeforeLeave
 - [x] useFadeIn
 - [x] useNetwork
-- [ ] useScroll & useFullscreen
+- [x] useScroll
+- [ ] useFullscreen
 - [ ] useNotification
 - [ ] useAxios
