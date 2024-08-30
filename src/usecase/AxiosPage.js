@@ -8,6 +8,7 @@ const AxiosPage = () => {
     <div>
       AxiosPage
       <button onClick={refetch}>refetch</button>
+      <p>isLoading:{`${isLoading}`}</p>
     </div>
   );
 };

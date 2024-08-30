@@ -3,29 +3,25 @@ import { useCallback, useEffect, useState } from "react";
 
 const useAxios = (options, axiosInstance = defaultAxios) => {
   const [state, setState] = useState({ isLoading: true, error: null, data: null });
-  const [trigger, setTrigger] = useState(Date.now());
 
-  const updater = useCallback(() => {
+  const doFetch = useCallback(() => {
     if (!options.url) return;
+    setState((state) => ({ ...state, isLoading: true }));
+
     axiosInstance(options)
       .then((response) => {
-        setState((state) => ({ ...state, loading: false, data: response.data }));
+        setState((state) => ({ ...state, isLoading: false, data: response.data }));
       })
       .catch((error) => {
-        setState((state) => ({ ...state, loading: false, error }));
+        setState((state) => ({ ...state, isLoading: false, error }));
       });
-  }, [axiosInstance, options.url, trigger]);
+  }, [axiosInstance, options.url]);
 
   useEffect(() => {
-    updater();
-    console.log("called");
-  }, [updater]);
+    doFetch();
+  }, [doFetch]);
 
-  const refetch = () => {
-    setState((state) => ({ ...state, loading: true }));
-    setTrigger(Date.now());
-  };
-  return { ...state, refetch };
+  return { ...state, refetch: doFetch };
 };
 
 export default useAxios;
