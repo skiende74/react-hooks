@@ -1,9 +1,17 @@
-import React, { useRef } from "react";
+import React from "react";
+import useClick from "../hooks/useClick";
 
 const ClickPage = () => {
-  const input = useRef();
+  const onClick = () => {
+    console.log("say Hello");
+  };
+  const title = useClick(onClick);
 
-  return <div>ClickPage</div>;
+  return (
+    <div>
+      <h1 ref={title}>Hi</h1>
+    </div>
+  );
 };
 
 export default ClickPage;
