@@ -1,9 +1,9 @@
-import FullScreenPage from "./usecase/FullScreenPage";
+import NotificationPage from "./usecase/NotificationPage";
 
 function App() {
   return (
     <div className="app">
-      <FullScreenPage />
+      <NotificationPage />
     </div>
   );
 }
